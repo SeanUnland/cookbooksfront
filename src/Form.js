@@ -8,6 +8,19 @@ const Form = (props) => {
     props.handleSubmit(formData);
     props.history.push("/");
   };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+      />
+
+      <input type="submit" value={props.label} />
+    </form>
+  );
 };
 
 export default Form;
